@@ -20,6 +20,13 @@ public class ConnectToDB  {
 	
 	static Connection connection;
 	
+	protected	List<String> result = new ArrayList<String>();
+	protected	List<String> result1 = new ArrayList<String>();
+	protected 	List<String> result2 = new ArrayList<String>();
+	protected	ArrayList<ArrayList<String>> lista = new ArrayList<ArrayList<String>>();  
+	
+
+	
 	
 	
 
