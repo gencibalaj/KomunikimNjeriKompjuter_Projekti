@@ -25,7 +25,21 @@ public class ConnectToDB  {
 	protected 	List<String> result2 = new ArrayList<String>();
 	protected	ArrayList<ArrayList<String>> lista = new ArrayList<ArrayList<String>>();  
 	
-
+	
+	public   ConnectToDB() 
+	{
+		try{
+		Class.forName("com.mysql.jdbc.Driver");
+		
+		connection=DriverManager.getConnection
+				("jdbc:mysql://"+servername+":"+port+"/"+databasename,username, password);
+		
+		}catch(ClassNotFoundException | SQLException e){
+		    System.out.println("Exception " + e);
+		   }
+	
+	}
+	
 	
 	
 	
