@@ -10,8 +10,15 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 
 
+public class ConnectToDB  {
 
+	final static String username="root";
+	final static  String password="diti";
+	final static  String databasename="JavaProject";
+	final static  String servername="localhost";
+	final static  String port="3306";
 	
+	static Connection connection;
 	
 	
 	
