@@ -19,3 +19,15 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 
+public class ClockPane extends Pane {
+	private int hour;
+	private int minute;
+	private int second;
+	private Timeline animation;
+
+	// Clock pane's width and height
+	private double w = 180, h = 80;
+
+	/** Construct a default clock with the current time */
+	public ClockPane() {
+		setStyle("-fx-effect: dropshadow(gaussian,lightgrey,2,2,1,1);" );
