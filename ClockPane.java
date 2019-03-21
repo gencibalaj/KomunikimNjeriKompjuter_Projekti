@@ -135,4 +135,23 @@ public class ClockPane extends Pane {
 		for(int i = 0; i < 12; i++) {
 			Text t = new Text(Math.cos(i*Math.PI/6-Math.PI/3)*clockRadius+centerX,Math.sin(i*Math.PI/6-Math.PI/3)*clockRadius+centerY,(i+1)+"");
 			t.setStyle("-fx-font-weight: bold;-fx-font-size:10");
-	
+			this.getChildren().add(t);
+		}
+		// Draw second hand
+		double sLength = clockRadius * 0.8;
+		double secondX = centerX + sLength *
+			Math.sin(second * (2 * Math.PI / 60));
+		double secondY = centerY - sLength *
+			Math.cos(second * (2 * Math.PI / 60));
+		Line sLine = new Line(centerX, centerY, secondX, secondY);
+		sLine.setStroke(Color.BLACK);
+
+		// Draw minute hand
+		double mLength = clockRadius * 0.65;
+		double xMinute = centerX + mLength *
+			Math.sin(minute * (2 * Math.PI / 60));
+		double minuteY = centerY - mLength *
+			Math.cos(minute * (2 * Math.PI / 60));
+		Line mLine = new Line(centerX, centerY, xMinute, minuteY);
+		mLine.setStroke(Color.BLACK);
+
