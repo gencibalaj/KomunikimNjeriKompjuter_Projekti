@@ -31,3 +31,21 @@ public class ClockPane extends Pane {
 	/** Construct a default clock with the current time */
 	public ClockPane() {
 		setStyle("-fx-effect: dropshadow(gaussian,lightgrey,2,2,1,1);" );
+		setPrefSize(w, h);
+		setCurrentTime();
+		animation = new Timeline(
+			new KeyFrame(Duration.millis(1000), e -> moveClock()));
+		animation.setCycleCount(Timeline.INDEFINITE);
+		animation.play();
+	}
+
+	/** Construct a click with specified hour, minute, and second */
+	public ClockPane(int hour, int minute, int second) {
+		
+		this.hour = hour;
+		this.minute = minute;
+		this.second = second;
+		paintClock();
+		animation = new Timeline(
+			new KeyFrame(Duration.millis(1000), e -> moveClock()));
+	
