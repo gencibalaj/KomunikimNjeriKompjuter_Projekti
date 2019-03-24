@@ -168,3 +168,23 @@ public class ClockPane extends Pane {
 		getChildren().addAll(sLine, mLine, hLine);
 	}
 
+	/* Animate the clock */
+	protected void moveClock() {
+		if (minute == 60) {
+			hour += 1; 
+		}	
+		if (second == 60) {
+			minute += 1;
+		}
+		second = (second < 60 ? second + 1 : 1);
+		paintClock();	
+	}
+
+	public void play() {
+		animation.play();
+	}
+
+	public void pause() {
+		animation.pause();
+	}
+}
