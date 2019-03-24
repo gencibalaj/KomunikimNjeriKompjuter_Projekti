@@ -155,3 +155,16 @@ public class ClockPane extends Pane {
 		Line mLine = new Line(centerX, centerY, xMinute, minuteY);
 		mLine.setStroke(Color.BLACK);
 
+		// Draw hour hand 
+		double hLength = clockRadius * 0.5;
+		double hourX = centerX + hLength *
+			Math.sin((hour % 12 + minute / 60.0) * (2 * Math.PI / 12));
+		double hourY = centerY - hLength * 
+			Math.cos((hour % 12 + minute / 60.0) * (2 * Math.PI / 12));
+		Line hLine = new Line(centerX, centerY, hourX, hourY);
+		hLine.setStroke(Color.BLACK);
+
+		
+		getChildren().addAll(sLine, mLine, hLine);
+	}
+
