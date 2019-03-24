@@ -22,3 +22,22 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 
 public class AddPacient extends GridPane {
+
+	private TextField FName = new TextField();
+	private TextField Place = new TextField();
+	private TextField LName = new TextField();
+	private TextField PersonalNr = new TextField();
+	private RadioButton Male = new RadioButton("Male");
+	private RadioButton Female = new RadioButton("Female");
+	private DatePicker BDay = new DatePicker();
+	private Button Clear = new Button("Clear");
+
+	private Button Add = new Button("Add");
+	private Button Update = new Button("Update");
+
+	private TextField RHFactor = new TextField();
+	private TextField BloodType = new TextField();
+	private TextField Allergies = new TextField();
+	private TextField Vaccination = new TextField();
+	private Label GenderLabel = I18N.getLabel("Gender");
+
