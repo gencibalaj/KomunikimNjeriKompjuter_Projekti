@@ -41,3 +41,34 @@ public class AddPacient extends GridPane {
 	private TextField Vaccination = new TextField();
 	private Label GenderLabel = I18N.getLabel("Gender");
 
+	ToggleGroup toggleGroup = new ToggleGroup();
+
+	String cssLayout = "-fx-font-size: 20px;\n" + "-fx-effect: dropshadow(gaussian,lightgrey,2,2,1,1);";
+
+	public AddPacient(Pacient p) {
+		this();
+		FName.setText(p.getFname());
+		LName.setText(p.getLname());
+		PersonalNr.setText(p.getPersonalnr());
+		BDay.setValue(p.getBday());
+		RHFactor.setText(p.getRhfactory());
+		Allergies.setText(p.getAllergiers());
+		Vaccination.setText(p.getVaccinations());
+		Place.setText(p.getPlace());
+		BloodType.setText(p.getBloodtype());
+
+		add(Update, 5, 6);
+		Update.setVisible(true);
+		Add.setVisible(false);
+		
+		Update.setOnAction(e->{ 
+			if(Validate()) {
+				Pacient.updateInPacient(p.getPid(), FName.getText(),LName.getText(), 
+				BDay.getValue(), Place.getText(), p.getGender(),
+				RHFactor.getText(), BloodType.getText(),Vaccination.getText(), 
+				Allergies.getText(), PersonalNr.getText()); 
+			}	
+		});
+		 
+
+	}
