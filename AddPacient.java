@@ -118,4 +118,52 @@ public class AddPacient extends GridPane {
 	}
 	public Button getClear() {
 		return this.Clear;
-	
+	}
+	/*
+	 * public static void clearFields() { FName.setText(""); LName.setText("");
+	 * PersonalNr.setText(""); BDay.setValue(null); RHFactor.setText("");
+	 * Allergies.setText(""); Vaccination.setText(""); BloodType.setText("");
+	 * java.sql.Date gettedDatePickerDate = java.sql.Date.valueOf(BDay.getValue());
+	 * System.out.println(gettedDatePickerDate.toString());
+	 * 
+	 * }
+	 */
+	/*
+	 * public static Boolean getGender() { Boolean ok=true; if
+	 * (gender.toLowerCase().indexOf("female".toLowerCase()) != -1) { ok=true; }
+	 * else { ok=false; } return ok;
+	 * 
+	 * }
+	 */
+
+	public Boolean Validate() {
+		Boolean a = true;
+		if (FName.getText() == null || FName.getText().equals("")) {
+			FName.setStyle("-fx-border-color:red");
+			a = false;
+		}
+		if (LName.getText() == null || LName.getText().equals("")) {
+			LName.setStyle("-fx-border-color:red");
+			a = false;
+		}
+		if (PersonalNr.getText() == null || PersonalNr.getText().equals("")) {
+			PersonalNr.setStyle("-fx-border-color:red");
+			a = false;
+		}
+		if (toggleGroup.getSelectedToggle() == null) {
+			GenderLabel.setTextFill(Color.RED);
+			a = false;
+		}
+		if (BDay.getValue() == null) {
+			BDay.setStyle("-fx-border-color:red");
+			a = false;
+		}
+		if (Place.getText() == null || Place.getText().equals("")) {
+			Place.setStyle("-fx-border-color:red");
+			a = false;
+		}
+
+		return a;
+	}
+
+}
