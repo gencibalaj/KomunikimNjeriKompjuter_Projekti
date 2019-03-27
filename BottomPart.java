@@ -49,4 +49,20 @@ public class BottomPart extends VBox {
 		Messages.getChildren().add(message);
 		
 		
+		//setPadding(new Insets(10,10,10,10));
 		
+		GridPane statusBar = new GridPane();
+		Description.setText("Add Pacient");
+		DoctorLabel.setText("Doctor: Agron Bunjaki");
+		
+		statusBar.setPadding(new Insets(10,10,10,10));
+		statusBar.prefWidthProperty().bind(this.prefWidthProperty());
+		ColumnConstraints halfWidth = new ColumnConstraints();
+		halfWidth.setPercentWidth(50);
+		statusBar.add(DoctorLabel, 1, 0);
+		statusBar.add(Description, 0, 0);
+		statusBar.getColumnConstraints().addAll(halfWidth,halfWidth);
+		GridPane.setHalignment(DoctorLabel, HPos.RIGHT);
+		getChildren().addAll(statusBar);
+	}
+	
