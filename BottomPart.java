@@ -34,3 +34,19 @@ public class BottomPart extends VBox {
 		img.setFitHeight(200);	
 		img.setFitWidth(200);
 		
+		img1.setImage(image1);
+		img1.setFitHeight(200);	
+		img1.setFitWidth(200);
+		HBox hbox = new HBox();
+		//hbox.getChildren().addAll(sp);
+		setAlignment(Pos.CENTER);
+		StackPane Messages = new StackPane();
+		Messages.setVisible(false);
+		Messages.setMaxWidth(this.getWidth()/2);	
+		Messages.setStyle("-fx-background-color: green; -fx-background-radius: 50px;");
+		Messages.setPadding(new Insets(10));
+		message.setFill(Color.WHITE);
+		Messages.getChildren().add(message);
+		
+		
+		
