@@ -25,4 +25,12 @@ public class BottomPart extends VBox {
 	public BottomPart()
 	{	
 		
-		}
+		//setSpacing(600);
+		getStylesheets().add("projektiKNK/main.css");
+		//setStyle("-fx-background-color: #605ca8;");
+		setId("statusBar");
+		setAlignment(Pos.CENTER);
+		img.setImage(image);
+		img.setFitHeight(200);	
+		img.setFitWidth(200);
+		
