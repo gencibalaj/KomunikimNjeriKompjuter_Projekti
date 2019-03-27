@@ -14,3 +14,15 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 
+public class BottomPart extends VBox {
+	Image image = new Image("projektiKNK/shutdown.png");
+	ImageView img=new ImageView();
+	Image image1 = new Image("projektiKNK/restar.png");
+	ImageView img1=new ImageView();
+	static Text message = new Text();
+	static Label DoctorLabel = new Label();
+	static Label Description = new Label();
+	public BottomPart()
+	{	
+		
+		}
