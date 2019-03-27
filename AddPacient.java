@@ -72,3 +72,26 @@ public class AddPacient extends GridPane {
 		 
 
 	}
+
+	public AddPacient() {
+		setId("main");
+		setStyle(cssLayout);
+		Male.setToggleGroup(toggleGroup);
+		Female.setToggleGroup(toggleGroup);
+		setVgap(20);
+		setHgap(20);
+		setAlignment(Pos.CENTER);
+		
+		addRow(0, I18N.getLabel("FirstName"), FName, I18N.getLabel("LastName"), LName);
+		addRow(1,I18N.getLabel("PersonalNumber"), PersonalNr,I18N.getLabel("Birthday"), BDay);
+		addRow(2,I18N.getLabel("Place"), Place,I18N.getLabel("Allergies"), Allergies);
+		addRow(3,I18N.getLabel("BloodType"), BloodType,I18N.getLabel("Vaccination"), Vaccination);
+		addRow(4,I18N.getLabel("RHFactor"), RHFactor);
+		
+		addRow(5, GenderLabel, Male);
+		addRow(6, new Label(""), Female, new Label());
+		add(Clear, 3, 5);
+		add(Add, 3, 6);
+		GridPane.setHalignment(Add, HPos.RIGHT);
+		GridPane.setHalignment(Clear, HPos.RIGHT);
+		//
