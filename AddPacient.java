@@ -95,3 +95,27 @@ public class AddPacient extends GridPane {
 		GridPane.setHalignment(Add, HPos.RIGHT);
 		GridPane.setHalignment(Clear, HPos.RIGHT);
 		//
+
+		//Clear.setOnAction(new AddEventsToButtons());
+		Add.setOnAction(e -> {
+			if (Validate()) {
+				Boolean gender = (toggleGroup.getSelectedToggle().toString().equals("Female")) ? true : false;
+				System.out.println(gender);
+				Pacient.insertInPacient(FName.getText(), LName.getText(), BDay.getValue(), Place.getText(), gender,
+						RHFactor.getText(), BloodType.getText(), Vaccination.getText(), Allergies.getText(),
+						PersonalNr.getText());
+				BottomPart.setMessage("Patient Added");
+				MainProgram.primaryPane.setCenter(new AddVisit());
+				
+			}
+		});
+	
+	
+		Node[] a = {Add,Clear,Male,Female};
+		String[] keys = {"add","clear","male","female"};
+		I18N.setText(a, keys);
+
+	}
+	public Button getClear() {
+		return this.Clear;
+	
