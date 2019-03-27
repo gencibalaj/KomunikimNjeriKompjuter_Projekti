@@ -66,3 +66,21 @@ public class BottomPart extends VBox {
 		getChildren().addAll(statusBar);
 	}
 	
+	public static void setMessage(String m) {
+		message.getParent().setVisible(true);
+		message.setText(m);
+		setTimeout(() -> message.getParent().setVisible(false), 2000);
+	}
+	
+	public static void setTimeout(Runnable runnable, int delay){
+	    new Thread(() -> {
+	        try {
+	            Thread.sleep(delay);
+	            runnable.run();
+	        }
+	        catch (Exception e){
+	            System.err.println(e);
+	        }
+	    }).start();
+	}
+}
