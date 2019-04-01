@@ -112,3 +112,27 @@ public class AddVisit extends GridPane{
 		
 	}*/
 	
+	public Boolean Validate() {
+		Boolean a = true;
+		if(Fname.getText() == null || Fname.getText().equals("")) {
+			Fname.setStyle("-fx-border-color:red");
+			a = false;
+		}
+		if(LName.getText() == null || LName.getText().equals("")) {
+			LName.setStyle("-fx-border-color:red");
+			a = false;
+		} 
+		
+		
+		if(Vdate.getValue() == null) {
+			Vdate.setStyle("-fx-border-color:red");
+			a = false;
+		}
+		
+		if(Description.getText() == null || Description.getText().equals("")) {
+			Description.setStyle("-fx-border-color:red");
+			a = false;
+		} 
+		return a;
+	}
+}
