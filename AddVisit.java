@@ -25,3 +25,31 @@ public class AddVisit extends GridPane{
 
 	private Button Add = new Button("Add");
 	
+	
+	
+
+	String cssLayout = 
+            "-fx-font-size: 20px;\n" 
+			+"-fx-effect: dropshadow(gaussian,lightgrey,2,2,1,1);";
+	
+	public AddVisit(Visit v) {
+		this();
+		
+		Vdate.setValue(v.getVdate());
+		Fname.setText(v.getFname());
+		LName.setText(v.getLname());
+		Description.setText(v.getDescription());
+		Update.setVisible(true);
+		Add.setVisible(false);
+		add(Update,5,6);
+		Update.setOnAction(e->{
+			if(Validate()) {
+			System.out.println(Fname.getText());
+			System.out.println(v.getVid());
+			Visit.updateInTable(v.getVid(),Fname.getText(),LName.getText(),Vdate.getValue(),Description.getText());
+			}
+		});
+		
+	}
+	
+	p
