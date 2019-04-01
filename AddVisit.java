@@ -11,3 +11,21 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 
+public class AddVisit extends GridPane{
+
+	private TextField Fname=new TextField(); 
+	private TextArea Description=new TextArea();
+	private TextField LName=new TextField();
+	
+	private DatePicker  Vdate=new DatePicker();
+	private Button Clear = new Button("Clear");
+
+	
+	private Button Update = new Button("Update");
+
+	private Button Add = new Button("Add");
+	
+	
+	
+
+	
