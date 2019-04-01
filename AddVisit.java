@@ -81,3 +81,34 @@ public class AddVisit extends GridPane{
 			}
 		});
 	
+	}
+	
+	
+	
+	public Button getClear() {
+		return this.Clear;
+	}
+	public  void clearFields()
+	{
+		Fname.setText("");
+		LName.setText("");
+		
+		Description.setText("");
+		Vdate.setValue(null);
+
+	}
+	/*public static Boolean getGender()
+	{
+		Boolean ok=true;
+		if (gender.toLowerCase().indexOf("female".toLowerCase()) != -1)
+		{
+			ok=true;
+		}
+		else
+		{
+			ok=false;
+		}
+		return ok;
+		
+	}*/
+	
