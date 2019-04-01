@@ -52,4 +52,21 @@ public class AddVisit extends GridPane{
 		
 	}
 	
+	public AddVisit()
+	{
+		setStyle(cssLayout);
 	
+		setVgap(20);
+		setHgap(20);
+		setAlignment(Pos.CENTER);
+		addRow(0,new Label("First Name"),Fname);
+		addRow(1,new Label("Last Name"),LName);
+		addRow(2,new Label("Description"),Description);
+		addRow(3,new Label("Visit Date"),Vdate);
+		
+		add(Clear,5,5);
+		
+	add(Add,5,6);
+		
+		
+		
