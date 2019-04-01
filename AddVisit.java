@@ -69,4 +69,46 @@ public class AddVisit extends GridPane{
 	add(Add,5,6);
 		
 		
+		Clear.setOnAction(c->{
+			 clearFields();
+
+		});
+		Add.setOnAction(e -> {
+			if(Validate()) {
+			
+			
+			Visit.insertInTable(MainProgram.getPacient().getPid(),MainProgram.doctor.getId(),Vdate.getValue(),Fname.getText(), LName.getText(), Description.getText());
+			}
+		});
+	
+	}
+	
+	
+	
+	public Button getClear() {
+		return this.Clear;
+	}
+	public  void clearFields()
+	{
+		Fname.setText("");
+		LName.setText("");
 		
+		Description.setText("");
+		Vdate.setValue(null);
+
+	}
+	/*public static Boolean getGender()
+	{
+		Boolean ok=true;
+		if (gender.toLowerCase().indexOf("female".toLowerCase()) != -1)
+		{
+			ok=true;
+		}
+		else
+		{
+			ok=false;
+		}
+		return ok;
+		
+	}*/
+	
