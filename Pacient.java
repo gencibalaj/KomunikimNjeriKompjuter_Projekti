@@ -165,4 +165,47 @@ public class Pacient {
 
 		
 			preparedStatement.setString(1, fname);
+			preparedStatement.setString(2, lname);
+			preparedStatement.setDate(3,  Date.valueOf(date));
+			preparedStatement.setString(4, place);
+			preparedStatement.setBoolean(5,gender);
+			preparedStatement.setString(6, rhfactory);
+			preparedStatement.setString(7, bloodtype);
+			preparedStatement.setString(8, vaccinations);
+			preparedStatement.setString(9, allergiers);
+			preparedStatement.setString(10, personalnr);
+		
 	
+			
+			return (preparedStatement.executeUpdate() > 0);
+		} catch(SQLException ex) {
+			ex.printStackTrace();
+			return false;	
+		}
+	}
+		public static boolean updateInPacient(int pid,String fname, String lname,LocalDate bday,String place,Boolean gender,
+				String rhfactory,String bloodtype,String  vaccinations,String allergies,String personalnr)
+		{
+			String query = "UPDATE pacient SET fname=?, lname=?, bday=?,place=?,gender=?,rhfactory=?,bloodtype=?,vaccinations=?, allergies=?, personalnr=? WHERE pid=?";
+			try {
+				
+				PreparedStatement preparedStatement =(PreparedStatement) ConnectToDB.connection.prepareStatement(query);
+			
+
+			
+				preparedStatement.setString(1, fname);
+				preparedStatement.setString(2, lname);
+				preparedStatement.setDate(3, Date.valueOf(bday));
+				preparedStatement.setString(4, place);
+				preparedStatement.setBoolean(5,gender);
+				preparedStatement.setString(6, rhfactory);
+				preparedStatement.setString(7, bloodtype);
+				preparedStatement.setString(8, vaccinations);
+				preparedStatement.setString(9, allergies);
+				preparedStatement.setString(10, personalnr);
+				preparedStatement.setInt(11, pid);
+				
+			
+				
+				
+				return (preparedStatement.executeUpdate() > 0);
