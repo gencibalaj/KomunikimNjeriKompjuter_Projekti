@@ -209,3 +209,43 @@ public class Pacient {
 				
 				
 				return (preparedStatement.executeUpdate() > 0);
+			} catch(SQLException ex) {
+				ex.printStackTrace();
+				return false;	
+			}
+			
+		
+	}
+		public static boolean deletePacient(int pid) {
+			String query = "Delete from pacient where pid=?";
+			
+			try {
+				PreparedStatement preparedStatement = (PreparedStatement) ConnectToDB.connection.prepareStatement(query);
+				preparedStatement.setInt(1, pid);
+				return (preparedStatement.executeUpdate() > 0);
+			} catch(SQLException ex) {
+				ex.printStackTrace();
+				return false;
+			}
+		}
+		
+		public static ObservableList<Pacient> getPacient()
+		{
+			String query="SELECT * FROM pacient";
+			ObservableList<Pacient> pacientList= FXCollections.observableArrayList();
+			try {
+				PreparedStatement preparedStatement = (PreparedStatement) ConnectToDB.connection.prepareStatement(query);
+				ResultSet resultSet = preparedStatement.executeQuery();
+				
+				while(resultSet.next()) {
+					Pacient pacient = new Pacient(resultSet.getInt("pid"),resultSet.getString("fname"),resultSet.getString("lname"),resultSet.getDate("bday").toLocalDate(),
+							resultSet.getString("place"),resultSet.getBoolean("gender"),resultSet.getString("rhfactory"),resultSet.getString("bloodtype")
+							,resultSet.getString("vaccinations"),resultSet.getString("allergies"),resultSet.getString("personalnr"));
+					pacientList.add(pacient);
+				}
+			} catch(SQLException ex) {
+				ex.printStackTrace();
+			}
+			
+			
+	
