@@ -248,4 +248,30 @@ public class Pacient {
 			}
 			
 			
-	
+			return pacientList;
+			
+		}	
+		public static ObservableList<Pacient> getPacientByName(String Name)
+		{
+			Name="%"+Name+"%";
+			String query="select * from pacient where fname like"+"\""+Name+"\"";
+			ObservableList<Pacient> pacientList= FXCollections.observableArrayList();
+			try {
+				PreparedStatement preparedStatement = (PreparedStatement) ConnectToDB.connection.prepareStatement(query);
+				ResultSet resultSet = preparedStatement.executeQuery();
+				
+				while(resultSet.next()) {
+					Pacient pacient = new Pacient(resultSet.getInt("pid"),resultSet.getString("fname"),resultSet.getString("lname"),resultSet.getDate("bday").toLocalDate(),
+							resultSet.getString("place"),resultSet.getBoolean("gender"),resultSet.getString("rhfactory"),resultSet.getString("bloodtype")
+							,resultSet.getString("vaccinations"),resultSet.getString("allergies"),resultSet.getString("personalnr"));
+					pacientList.add(pacient);
+				}
+			} catch(SQLException ex) {
+				ex.printStackTrace();
+			}
+			
+			
+			return pacientList;
+			
+		}	
+}
