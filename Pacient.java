@@ -139,3 +139,30 @@ public class Pacient {
 		
 	}
 	
+	public void setFname(String fname)
+	{
+		this.fname=fname;
+	}
+	
+	public void setLname(String lname)
+	{
+		this.lname=lname;
+	}
+	public void setBday(LocalDate bday)
+	{
+		this.bday=bday;
+	}
+	
+	public static boolean insertInPacient(String fname, String lname,LocalDate date,String place,Boolean gender,
+			String rhfactory,String bloodtype,String  vaccinations,String allergiers,String personalnr)
+	{
+		String query = "INSERT INTO pacient(fname, lname, bday,place,gender,rhfactory,bloodtype,vaccinations,allergies,personalnr) VALUES(?,?,?,?,?,?,?,?,?,?)";
+		System.out.println(query);
+		try {
+			
+			PreparedStatement preparedStatement =(PreparedStatement) ConnectToDB.connection.prepareStatement(query);
+		
+
+		
+			preparedStatement.setString(1, fname);
+	
