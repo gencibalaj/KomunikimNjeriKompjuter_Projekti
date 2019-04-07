@@ -50,3 +50,92 @@ public class Pacient {
 	{
 		return this.pid;
 	}
+	
+	public String getFname()
+	{
+		return this.fname;
+	}
+	public String getLname()
+	{
+		return this.lname;
+	}
+	
+	public LocalDate getBday()
+	{
+		return this.bday;
+	}
+	
+	public Boolean getGender()
+	{
+		return this.gender;
+	}
+	
+	public String getRhfactory()
+	{
+		return this.rhfactory;
+	}
+	
+	public String getBloodtype()
+	{
+		return this.bloodtype;
+	}
+	
+	public String getPlace()
+	{
+		return this.place;
+	}
+	public String getVaccinations()
+	{
+		return this.vaccinations;
+	}
+	public String getAllergiers()
+	{
+		return this.allergiers;
+	}
+	public String getPersonalnr()
+	{
+		return this.personalnr;
+	}
+	
+	//seters
+	public void setAllergiers(String allergiers)
+	{
+		this.allergiers=allergiers;
+	}
+	
+	public void setPersonalnr(String personalnr)
+	{
+		this.personalnr=personalnr;
+	}
+	
+	
+	public void setGender(Boolean gender)
+	{
+		this.gender=gender;
+	}
+	
+	public void setRHfactory(String rhfactory)
+	{
+		this.rhfactory=rhfactory;
+	}
+	
+	public void setVaccinations(String vaccinations)
+	{
+		this.vaccinations=vaccinations;
+	}
+	
+	public void setBloodType(String bloodtype)
+	{
+		this.bloodtype=bloodtype;
+	}
+	public void getPlace(String place)
+	{
+		this.place=place;
+	}
+	
+	public void setPid(int pid)
+	{
+		this.pid=pid;
+		
+	}
+	
