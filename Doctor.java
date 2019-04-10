@@ -36,3 +36,33 @@ public class Doctor {
 	
 	public String getEmail() {
 		return email;
+	}
+	
+	public String getPassword() {
+		return password;
+	}
+	
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	public void setId(String dname) {
+		this.dname = dname;
+	}
+	
+	public void setLdname(String ldname) {
+		this.ldname = ldname;
+	}
+	
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
+	public static boolean addDoctor(String dname, String ldname, String email, String password) {
+		String query = "INSERT INTO doctor(dname, ldname, email, password) VALUES(?,?,?,?)";
+		try {
+			PreparedStatement preparedStatement = (PreparedStatement) DBConnection.getConnection().prepareStatement(query);
