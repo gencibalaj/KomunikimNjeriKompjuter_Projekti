@@ -87,3 +87,20 @@ public class ShowVisits extends VBox {
 			
 	
 				
+			
+				
+				//table1.getItems().addAll(Visit.getVisitbyName(LeftSideButtons.searchBarVisit.getText()));
+		table1.getItems().addAll(Visit.getVisit());
+		
+		
+			
+	
+		Delete.setOnAction(e -> {
+			System.out.println("Eltio");
+			Visit v = table1.getSelectionModel().getSelectedItem();
+			if(v != null) {
+				Visit.deleteVisit(v.getVid());
+				table1.getItems().clear();
+				table1.getItems().addAll(Visit.getVisit());
+			}
+	
