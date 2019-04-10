@@ -112,3 +112,17 @@ public class ShowPacients extends VBox{
 		});
 		*/
 		
+		
+		
+		Delete.setOnAction(e -> {
+			System.out.println("Eltio");
+			Pacient p = table.getSelectionModel().getSelectedItem();
+			if(p != null) {
+				
+				Pacient.deletePacient(p.getPid());
+				table.getItems().clear();
+				table.getItems().addAll(Pacient.getPacient());
+			}
+		});
+		
+	
