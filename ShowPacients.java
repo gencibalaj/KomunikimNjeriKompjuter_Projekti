@@ -53,4 +53,38 @@ public class ShowPacients extends VBox{
 		
 		column1.setCellValueFactory(new PropertyValueFactory("fname"));
 		column1.setPrefWidth(100);
+		getStylesheets().add("projektiKNK/style.css");
+		
+		column2.setCellValueFactory(new PropertyValueFactory("lname"));
+		column2.setPrefWidth(100);
+		
+		
+		column3.setCellValueFactory(new PropertyValueFactory("bday"));
+		column3.setPrefWidth(100);
+		
+		
+		column4.setCellValueFactory(new PropertyValueFactory("gender"));
+		column4.setPrefWidth(100);
+		
+		column5.setCellValueFactory(new PropertyValueFactory("rhfactory"));
+		column5.setPrefWidth(150);
+		
+		
+		column6.setCellValueFactory(new PropertyValueFactory("bloodtype"));
+		column6.setPrefWidth(150);
+		
+		
+		column7.setCellValueFactory(new PropertyValueFactory("place"));
+		column7.setPrefWidth(100);
 	
+		
+		column8.setCellValueFactory(new PropertyValueFactory("vaccinations"));
+		column8.setPrefWidth(150);
+		
+		
+		column9.setCellValueFactory(new PropertyValueFactory("allergiers"));
+		column9.setPrefWidth(150);
+		
+		
+		column10.setCellValueFactory(new PropertyValueFactory("personalnr"));
+		column10.setPrefWidth(150);
