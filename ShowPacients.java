@@ -136,4 +136,23 @@ public class ShowPacients extends VBox{
 			}
 			
 		});
+		
+		table.setOnMouseClicked(e -> {
+			Pacient p = table.getSelectionModel().getSelectedItem();
+			if(p != null) {
+				MainProgram.setPacient(table.getSelectionModel().getSelectedItem());
+			}
+		});
+		
+		Update.setOnAction(e -> {
+			Pacient p = table.getSelectionModel().getSelectedItem();
+			if(p != null) {
+				
+				MainProgram.primaryPane.setCenter(new AddPacient(p));
+			}
+		});
+		
 	
+	}
+	
+}
