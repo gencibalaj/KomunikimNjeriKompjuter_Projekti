@@ -88,3 +88,27 @@ public class ShowPacients extends VBox{
 		
 		column10.setCellValueFactory(new PropertyValueFactory("personalnr"));
 		column10.setPrefWidth(150);
+		
+		
+		setPadding(new Insets(10,10,10,10));
+		
+		 //setMaxWidth(1020);
+		 //setMinHeight(10000);
+		 
+		
+		
+		table.getColumns().addAll(column1,column2,column3,column4,column5,column6,column7,column8,column9,column10);
+		
+		
+	table.getItems().addAll(Pacient.getPacientByName(LeftSideButtons.searchBar.getText()));
+		/*table.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+		    if (newSelection != null) {
+		    	LeftSideButtons.AddVisit.setDisable(false);
+		    }
+		    else
+		    {
+		    	LeftSideButtons.AddVisit.setDisable(true);
+		    }
+		});
+		*/
+		
