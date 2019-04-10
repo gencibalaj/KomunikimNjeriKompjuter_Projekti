@@ -103,4 +103,21 @@ public class ShowVisits extends VBox {
 				table1.getItems().clear();
 				table1.getItems().addAll(Visit.getVisit());
 			}
+		});
+		Update.setOnAction(e -> {
+			Visit v = table1.getSelectionModel().getSelectedItem();
+			if(v != null) {
+
+				MainProgram.primaryPane.setCenter(new AddVisit(v));
+			}
+		});
+		
 	
+		
+		
+	
+		
+
+	
+}
+}
