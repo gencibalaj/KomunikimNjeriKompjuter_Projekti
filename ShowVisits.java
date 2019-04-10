@@ -49,7 +49,23 @@ public class ShowVisits extends VBox {
 		
 		table1.prefHeightProperty().bind(this.heightProperty());
 		table1.setStyle(cssLayout);
-			
+		getChildren().addAll(buttons,table1);
+		
+		table1.setEditable(true);
+		
+		column1.setCellValueFactory(new PropertyValueFactory("vid"));
+		column1.setPrefWidth(100);
+		
+		column2.setCellValueFactory(new PropertyValueFactory("pid"));
+		column2.setPrefWidth(100);
+		
+		column3.setCellValueFactory(new PropertyValueFactory("did"));
+		column3.setPrefWidth(100);
+		
+		column4.setCellValueFactory(new PropertyValueFactory("vdate"));
+		column4.setPrefWidth(100);
+		
+		
 			
 	
 				
