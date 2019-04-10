@@ -36,4 +36,20 @@ public class ShowVisits extends VBox {
 	private TableColumn<Visit,String> column8 = new TableColumn<>("Description");
 	
 	
+	public ShowVisits()
+	{
+		super(20);
+		setStyle("-fx-background-color:pink;");
+		TableView<Visit> table1 = new TableView<>();
+		getStylesheets().add("projektiKNK/style.css");
+		HBox buttons = new HBox(10);
+		Button Delete=new Button("Delete");
+		Button Update=new Button("Update");
+		buttons.getChildren().addAll(Delete,Update);
 		
+		table1.prefHeightProperty().bind(this.heightProperty());
+		table1.setStyle(cssLayout);
+			
+			
+	
+				
