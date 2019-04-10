@@ -21,4 +21,19 @@ public class ShowVisits extends VBox {
             "-fx-font-size: 20px;\n"+
             "-fx-effect: dropshadow(gaussian,lightgrey,2,2,1,1);" ;
 	Button Delete=new Button("Delete");
+	Button Update=new Button("Update");
+	public static HBox h=new HBox(10);
+	
+
+	
+	private TableColumn<Visit,Integer> column1 = new TableColumn<>("VID");	
+	private TableColumn<Visit,Integer> column2 = new TableColumn<>("PID");
+	private TableColumn<Visit,Integer> column3 = new TableColumn<>("DID");
+	private TableColumn<Visit,Date> column4 = new TableColumn<>("Date");
+	private TableColumn<Visit,String> column5 = new TableColumn<>("Name");
+	private TableColumn<Visit,String> column6 = new TableColumn<>("Last Name");
+	private TableColumn<Visit,String> column7 = new TableColumn<>("Description");
+	private TableColumn<Visit,String> column8 = new TableColumn<>("Description");
+	
+	
 		
