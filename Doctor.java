@@ -21,3 +21,18 @@ public class Doctor {
 		this.email = email;
 		this.password = password;
 	}
+	
+	public int getId() {
+		return id;
+	}
+	
+	public String getDname() {
+		return dname;
+	}
+	
+	public String getLdname() {
+		return ldname;
+	}
+	
+	public String getEmail() {
+		return email;
