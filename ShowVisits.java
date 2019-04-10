@@ -65,7 +65,25 @@ public class ShowVisits extends VBox {
 		column4.setCellValueFactory(new PropertyValueFactory("vdate"));
 		column4.setPrefWidth(100);
 		
+		column5.setCellValueFactory(new PropertyValueFactory("fname"));
+		column5.setPrefWidth(180);
 		
+		column6.setCellValueFactory(new PropertyValueFactory("lname"));
+		column6.setPrefWidth(180);
+		
+		column7.setCellValueFactory(new PropertyValueFactory("description"));
+		column7.setPrefWidth(200);
+		column7.setCellValueFactory(new PropertyValueFactory("Dname"));
+		column7.setPrefWidth(200);
+		
+		
+		setPadding(new Insets(10,10,10,10));
+		
+		table1.getColumns().addAll(column1,column2,column3,column4,column5,column6,column7,column8);
+		//table1.getItems().addAll(Visit.getVisit());
+		
+	
+			
 			
 	
 				
