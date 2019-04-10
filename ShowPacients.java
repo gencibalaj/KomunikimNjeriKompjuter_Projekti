@@ -125,4 +125,15 @@ public class ShowPacients extends VBox{
 			}
 		});
 		
+		table.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Pacient>() {
+
+			@Override
+			public void changed(ObservableValue observable, Pacient oldValue, Pacient newValue) {
+				Pacient p = table.getSelectionModel().getSelectedItem();
+				if(p != null) {
+					
+				}
+			}
+			
+		});
 	
