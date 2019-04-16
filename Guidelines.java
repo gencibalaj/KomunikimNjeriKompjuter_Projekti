@@ -33,3 +33,23 @@ public class Guidelines {
 	{
 		this.pid=pid;
 	}
+	
+	public void setGdescription(String gdescription )
+	{
+		this.gdescription=gdescription;
+	}
+	
+	public int getGid()
+	{
+		return gid;
+	}
+	
+	public int getDid()
+	{
+		return did;
+	}
+	
+	public int getPid()
+	{
+		return pid;
+	}
