@@ -53,3 +53,28 @@ public class Guidelines {
 	{
 		return pid;
 	}
+	
+	static boolean inserInGuidelines(String gdescription)
+				{
+
+	String query = "INSERT INTO pacient(gdescription) VALUES(?)";
+	try 
+	{
+	
+		PreparedStatement preparedStatement =(PreparedStatement) ConnectToDB.connection.prepareStatement(query);
+		
+		preparedStatement.setString(1, gdescription);
+	
+		return (preparedStatement.executeUpdate() > 0);
+	} catch(SQLException ex) {
+		ex.printStackTrace();
+		return false;	
+	}
+
+	
+				}
+	
+
+
+
+}
