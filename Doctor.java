@@ -120,3 +120,17 @@ public class Doctor {
 			
 			ResultSet resultSet = preparedStatement.executeQuery();
 			if(resultSet.next()) {
+				return new Doctor(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getString(4), resultSet.getString(5));
+			}else {
+				return null;
+			}
+			
+		} catch(SQLException ex) {
+			ex.printStackTrace();
+			return null;	
+		}
+	}
+	
+	
+
+	public static List<Doctor> getBooks() {
