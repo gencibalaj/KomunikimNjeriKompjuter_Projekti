@@ -134,3 +134,23 @@ public class Doctor {
 	
 
 	public static List<Doctor> getBooks() {
+		List<Doctor> doctors = new ArrayList<Doctor>();
+		
+		String query = "SELECT *  doctor";
+		
+		try {
+			PreparedStatement preparedStatement = (PreparedStatement) DBConnection.getConnection().prepareStatement(query);
+			ResultSet resultSet = preparedStatement.executeQuery();
+			
+			while(resultSet.next()) {
+				Doctor doctor = new Doctor(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getString(4), resultSet.getString(5));
+				doctors.add(doctor);
+			}
+		} catch(SQLException ex) {
+			ex.printStackTrace();
+		}
+		
+		return doctors;
+	}
+	
+}
