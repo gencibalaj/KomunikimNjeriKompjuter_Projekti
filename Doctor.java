@@ -66,3 +66,22 @@ public class Doctor {
 		String query = "INSERT INTO doctor(dname, ldname, email, password) VALUES(?,?,?,?)";
 		try {
 			PreparedStatement preparedStatement = (PreparedStatement) DBConnection.getConnection().prepareStatement(query);
+			
+			preparedStatement.setString(1, dname);
+			preparedStatement.setString(2, ldname);
+			preparedStatement.setString(3, email);
+			preparedStatement.setString(4, password);
+			
+			return (preparedStatement.executeUpdate() > 0);
+		} catch(SQLException ex) {
+			ex.printStackTrace();
+			return false;	
+		}
+	}
+	
+	public static boolean deleteDoctor(int did) {
+		String query = "DELETE FROM doctor WHERE did=?";
+		try {
+			PreparedStatement preparedStatement = (PreparedStatement) DBConnection.getConnection().prepareStatement(query);
+			preparedStatement.setInt(1, did);
+			return (preparedStatement.executeUpdate() > 0);
