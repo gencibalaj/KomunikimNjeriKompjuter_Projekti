@@ -19,4 +19,17 @@ public class Guidelines {
 		this.gdescription=gdescription;
 	}
 	
-
+	public void setGid(int gid)
+	{
+		this.gid=gid;
+		
+	}
+	public void setDid(int did)
+	{
+		this.did=did;
+	}
+	
+	public void setPid(int pid)
+	{
+		this.pid=pid;
+	}
