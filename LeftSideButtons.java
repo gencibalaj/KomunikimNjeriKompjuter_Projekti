@@ -55,3 +55,13 @@ public class LeftSideButtons extends VBox{
 			this.setPrefWidth(220);
 			AddPacient.setStyle(cssButtom);
 			ShowPacients.setStyle(cssButtom);
+			ShowVisit.setStyle(cssButtom);
+			PrintGuidance.setStyle(cssButtom);
+			AddVisit.setStyle(cssButtom);
+		
+			AddPacient.prefWidthProperty().bind(this.prefWidthProperty());
+			AddVisit.prefWidthProperty().bind(this.prefWidthProperty());
+			ShowPacients.prefWidthProperty().bind(this.prefWidthProperty());
+			ShowVisit.prefWidthProperty().bind(this.prefWidthProperty());
+			PrintGuidance.prefWidthProperty().bind(this.prefWidthProperty());
+			
