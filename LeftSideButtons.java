@@ -12,3 +12,15 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+
+
+public class LeftSideButtons extends VBox{
+	private static Button AddPacient=new Button();
+	private static Button ShowPacients=new Button();
+	public static Button AddVisit=new Button();
+	private static Button ShowVisit=new Button();
+	public static  Button PrintGuidance=new Button();
+	
+	public static  TextField searchBar = new TextField();	
+	public static TextField searchBarVisit = new TextField();	
+	
