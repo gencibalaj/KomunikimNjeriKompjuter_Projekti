@@ -99,3 +99,17 @@ public class LeftSideButtons extends VBox{
 			    	MainProgram.primaryPane.setCenter(new ShowPacients());
 			    }
 			});		
+			
+			Node[] a = {AddPacient,ShowPacients,AddVisit,ShowVisit,PrintGuidance,searchBar,searchBarVisit};
+			String[] keys = {"addpatient","showpatient","addvisit","showvisit","printguidance","searchBar","searchBarVisit"};
+			I18N.setText(a, keys);
+	}
+	
+	public static void ToggleButtons(Boolean toggle) {
+		ShowVisit.setDisable(toggle);
+		PrintGuidance.setDisable(toggle);
+		AddVisit.setDisable(toggle);
+	}
+	
+	
+}
