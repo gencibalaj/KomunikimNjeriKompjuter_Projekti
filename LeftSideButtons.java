@@ -24,3 +24,16 @@ public class LeftSideButtons extends VBox{
 	public static  TextField searchBar = new TextField();	
 	public static TextField searchBarVisit = new TextField();	
 	
+	String cssLayout = "-fx-border-color: black;\n" +
+            "-fx-border-insets: 5;\n" +
+            "-fx-border-width: 0;\n"+
+            "-fx-font-size: 22px;-fx-background-color: linear-gradient( #f4f5f5, #dfdddd);\n"
+            + "-fx-effect: dropshadow(gaussian,lightgrey,2,2,1,1);" 
+            ;
+	
+	String cssButtom = "-fx-background-color: linear-gradient(to left, #f4f5f5, #dfdddd);"
+			+"-fx-effect: dropshadow(gaussian,lightgrey,2,2,1,1);" ;
+	public LeftSideButtons()
+	{		//
+		
+	//	getStylesheets().add(getClass().getResource("file:///C:/Users/ditjo/Desktop/leftButtons.css").toExternalForm());
