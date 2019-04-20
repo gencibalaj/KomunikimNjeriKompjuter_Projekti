@@ -37,3 +37,21 @@ public class LeftSideButtons extends VBox{
 	{		//
 		
 	//	getStylesheets().add(getClass().getResource("file:///C:/Users/ditjo/Desktop/leftButtons.css").toExternalForm());
+			getStylesheets().add("projektiKNK/addPacient.css");
+			ToggleButtons(true);
+			setStyle(cssLayout);
+			setAlignment(Pos.CENTER);
+			setSpacing(25);
+			StackPane sp=new StackPane();
+			sp.setPrefWidth(220);
+			sp.setPadding(new Insets(5,5,5,5));
+			sp.getChildren().add(new ClockPane());
+			searchBar.setId("searchBar");
+			searchBar.setPromptText("Search Pacient");
+			searchBarVisit.setPromptText("Search Visit");
+			searchBarVisit.setId("searchBarVisir");
+			getChildren().addAll(sp,searchBarVisit,searchBar,AddPacient,ShowPacients,ShowVisit,AddVisit,PrintGuidance);
+			
+			this.setPrefWidth(220);
+			AddPacient.setStyle(cssButtom);
+			ShowPacients.setStyle(cssButtom);
