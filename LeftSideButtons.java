@@ -65,3 +65,19 @@ public class LeftSideButtons extends VBox{
 			ShowVisit.prefWidthProperty().bind(this.prefWidthProperty());
 			PrintGuidance.prefWidthProperty().bind(this.prefWidthProperty());
 			
+			
+			setVgrow(PrintGuidance, Priority.ALWAYS);
+			ShowVisit.setOnAction(new AddEventsToButtons("showPatient"));
+			PrintGuidance.setOnAction(new AddEventsToButtons("Print"));
+			AddPacient.setOnAction(new AddEventsToButtons("add"));
+			
+			//AddVisit.setDisable(true);
+			ShowPacients.setOnAction(new AddEventsToButtons("showPatient"));
+			
+			AddVisit.setOnAction(new AddEventsToButtons("addVisits"));
+		
+		/*	searchBarVisit.setOnKeyPressed(e -> {
+				System.out.println("diti");
+			    if (e.getCode() == KeyCode.ENTER) {
+			    	MainProgram.primaryPane.setCenter(new ShowVisits());
+			    }
