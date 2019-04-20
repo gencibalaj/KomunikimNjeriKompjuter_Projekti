@@ -90,3 +90,12 @@ public class LeftSideButtons extends VBox{
 			    	MainProgram.primaryPane.setCenter(new ShowVisits());
 			    }
 			});
+			
+			searchBar.textProperty().addListener(new ChangeListener<String>() {
+			    @Override
+			    public void changed(ObservableValue<? extends String> observable,
+			            String oldValue, String newValue) {
+
+			    	MainProgram.primaryPane.setCenter(new ShowPacients());
+			    }
+			});		
