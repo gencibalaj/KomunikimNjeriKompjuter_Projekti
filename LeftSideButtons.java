@@ -81,3 +81,12 @@ public class LeftSideButtons extends VBox{
 			    if (e.getCode() == KeyCode.ENTER) {
 			    	MainProgram.primaryPane.setCenter(new ShowVisits());
 			    }
+			});*/
+			searchBarVisit.textProperty().addListener(new ChangeListener<String>() {
+			    @Override
+			    public void changed(ObservableValue<? extends String> observable,
+			            String oldValue, String newValue) {
+
+			    	MainProgram.primaryPane.setCenter(new ShowVisits());
+			    }
+			});
