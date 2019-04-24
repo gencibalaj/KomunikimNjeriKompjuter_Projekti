@@ -39,4 +39,26 @@ public class TopSideButtons extends HBox{
 			setStyle(cssLayout);
 			setAlignment(Pos.CENTER);
 			setSpacing(25);
+			
+			searchBar.setId("searchBar");
+			searchBar.setPromptText("Search Pacient");
+			searchBarVisit.setPromptText("Search Visit");
+			searchBarVisit.setId("searchBarVisir");
+			getChildren().addAll(searchBarVisit,searchBar,AddPacient,ShowPacients,ShowVisit,AddVisit,PrintGuidance);
+			
+			this.setPrefWidth(350);
+			AddPacient.setStyle(cssButtom);
+			ShowPacients.setStyle(cssButtom);
+			ShowVisit.setStyle(cssButtom);
+			PrintGuidance.setStyle(cssButtom);
+			AddVisit.setStyle(cssButtom);
+		
+			AddPacient.prefWidthProperty().bind(this.prefWidthProperty());
+			AddVisit.prefWidthProperty().bind(this.prefWidthProperty());
+			ShowPacients.prefWidthProperty().bind(this.prefWidthProperty());
+			ShowVisit.prefWidthProperty().bind(this.prefWidthProperty());
+			PrintGuidance.prefWidthProperty().bind(this.prefWidthProperty());
+			
+			
+			setHgrow(PrintGuidance, Priority.ALWAYS);
 	
