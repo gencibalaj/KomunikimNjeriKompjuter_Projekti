@@ -28,3 +28,14 @@ public class Toolbar extends ToolBar {
 			if(buttons[i].contentEquals("s")) {
 				Separator separator = new Separator(Orientation.VERTICAL);
 				getItems().add(separator);
+			}else {
+			 ImageView Icon = new ImageView("images/"+buttons[i]+".png");
+			 Icon.setFitHeight(30);
+			 Icon.setFitWidth(30);
+			 Button b = new Button();
+			 b.setGraphic(Icon);
+			 b.setId(buttons[i]);
+			 b.setTooltip(new Tooltip(buttonsInfo[i]));
+			 b.setOnAction(new AddEventsToButtons(buttons[i]));
+			 getItems().add(b);
+			} 
