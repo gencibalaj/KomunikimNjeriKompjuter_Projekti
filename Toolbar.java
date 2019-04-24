@@ -39,3 +39,19 @@ public class Toolbar extends ToolBar {
 			 b.setOnAction(new AddEventsToButtons(buttons[i]));
 			 getItems().add(b);
 			} 
+			 
+		}
+	}
+	public static void switchLanguage(String language) {
+		I18N.setLocale(new Locale(language));
+		/*
+		 * ((Button)this.lookup("#"+language)).setDisable(true);
+		 * if(language.contentEquals("en")) {
+		 * ((Button)this.lookup("#al")).setDisable(false); }else {
+		 * ((Button)this.lookup("#en")).setDisable(false); }
+		 */
+		
+	}
+	
+	
+}
