@@ -61,4 +61,22 @@ public class TopSideButtons extends HBox{
 			
 			
 			setHgrow(PrintGuidance, Priority.ALWAYS);
-	
+			ShowVisit.setOnAction(new AddEventsToButtons());
+			PrintGuidance.setOnAction(new AddEventsToButtons());
+			AddPacient.setOnAction(new AddEventsToButtons());
+			
+			//AddVisit.setDisable(true);
+			ShowPacients.setOnAction(new AddEventsToButtons());
+			
+			AddVisit.setOnAction(new AddEventsToButtons());
+		
+		/*	searchBarVisit.setOnKeyPressed(e -> {
+				System.out.println("diti");
+			    if (e.getCode() == KeyCode.ENTER) {
+			    	MainProgram.primaryPane.setCenter(new ShowVisits());
+			    }
+			});*/
+			searchBarVisit.textProperty().addListener(new ChangeListener<String>() {
+			    @Override
+			    public void changed(ObservableValue<? extends String> observable,
+			            String oldValue, String newValue) {
