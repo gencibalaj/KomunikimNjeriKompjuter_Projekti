@@ -11,3 +11,16 @@ public class UserInfo extends GridPane{
 	private Label lname=new Label("User Last Name");
 	private Text namefromdb=new Text();
 	private Text lnamefromdb=new Text();
+	
+	public UserInfo(String Name, String Lname)
+	{
+		setAlignment(Pos.CENTER);
+		namefromdb.setText(Name);
+		lnamefromdb.setText(Lname);
+		setVgap(10);
+		setHgap(10);
+		addRow(0,name,namefromdb);
+		addRow(1,lname,lnamefromdb);
+		
+	}
+}
