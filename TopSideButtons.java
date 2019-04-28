@@ -93,3 +93,16 @@ public class TopSideButtons extends HBox{
 			    	MainProgram.primaryPane.setCenter(new ShowPacients());
 			    }
 			});		
+	}
+	
+	public static void ToggleButtons(Boolean toggle) {
+		ShowVisit.setDisable(toggle);
+		PrintGuidance.setDisable(toggle);
+		AddVisit.setDisable(toggle);
+	}
+	
+	public static void EnableButtons() {
+			
+	}
+	
+}
