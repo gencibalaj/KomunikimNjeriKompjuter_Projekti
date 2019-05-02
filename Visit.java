@@ -182,6 +182,33 @@ public class Visit {
 		return visitList;
 		
 	}	
+	public static List<Visit> getVisitbyName(String Name)
+	{
+		Name="%"+Name+"%";
+		String query="select * from visit where fname like"+"\""+Name+"\"";
+		System.out.println(Name);
+		List<Visit> visitList=new ArrayList<Visit>();
+		try {
+			
+			PreparedStatement preparedStatement = (PreparedStatement) ConnectToDB.connection.prepareStatement(query);
+			ResultSet resultSet = preparedStatement.executeQuery();
+			
+			while(resultSet.next()) {
+				/*Visit visit = new Visit(resultSet.getInt("vid"),resultSet.getInt("pid"),resultSet.getInt("did"),resultSet.getDate("vdate").toLocalDate(),
+						resultSet.getString("fname"),resultSet.getString("lname"),
+						resultSet.getString("description"));
+				visitList.add(visit);*/
+			}
+		} catch(SQLException ex) {
+			ex.printStackTrace();
+		}
+		
+		
+		return visitList;
+	}
+	
+	}
+	
 	
 
 
