@@ -101,3 +101,22 @@ public class Visit {
 	{
 		return description;
 	}
+	
+	
+	public static boolean insertInTable(int pid, int did, LocalDate vdate,String fname, String lname,String description )
+	{
+		String query="INSERT INTO visit(vdate,fname,lname,description,pid,did) values(?,?,?,?,?,?)";
+		try {
+			PreparedStatement preparedStatement =(PreparedStatement) ConnectToDB.connection.prepareStatement(query);
+			preparedStatement.setString(2, fname);
+			preparedStatement.setString(3, lname);
+			preparedStatement.setDate(1,  Date.valueOf(vdate));
+			preparedStatement.setString(4, description);
+			preparedStatement.setInt(5, pid);
+			preparedStatement.setInt(6, did);
+			return (preparedStatement.executeUpdate() > 0);
+		} catch(SQLException ex) {
+			ex.printStackTrace();
+			return false;	
+		}
+	
