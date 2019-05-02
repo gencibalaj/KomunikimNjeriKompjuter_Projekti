@@ -20,4 +20,47 @@ public class Visit {
 	private String dname;
 	private String description;
 	
+	public Visit(int vid,int pid,int did, LocalDate vdate,String fname,String lname,String description,String dname)
+	{
+		this.vid=vid;
+		this.pid=pid;
+		this.did=did;
+		this.vdate=vdate;
+		this.fname=fname;
+		this.lname=lname;
+		this.description=description;
+		this.dname = dname;
+	}
+	
+	public void setPid(int pid)
+	{
+		this.pid=pid;
+	}
+	
+	public void setDid(int did)
+	{
+		this.did=did;
+	}
+	
+	public void setVdate(LocalDate vdate)
+	{
+		this.vdate=vdate;
+	}
+	
+	public void setFname(String fname)
+	{
+		this.fname=fname;
+	}
+	
+	public void setLname(String lname)
+	{
+		this.lname=lname;
+	}
+	
+	public void setDescription(String description)
+	{
+		this.description=description;
+	}
+	
+	//getters
 	
