@@ -157,6 +157,30 @@ public class Visit {
 			return false;
 		}
 	}
+	
+	public static List<Visit> getVisit()
+	{
+		String query="SELECT v.vid, p.fname, d.dname, v.did, v.pid,v.description FROM visit v, pacient p, doctor d WHERE v.pid = p.pid AND d.did = v.did;";
+		List<Visit> visitList=new ArrayList<Visit>();
+		try {
+			PreparedStatement preparedStatement = (PreparedStatement) ConnectToDB.connection.prepareStatement(query);
+			ResultSet resultSet = preparedStatement.executeQuery();
+			
+			while(resultSet.next()) {
+				Visit visit = new Visit(resultSet.getInt("vid"),resultSet.getInt("pid"),resultSet.getInt("did"), LocalDate.now(),
+						resultSet.getString("fname"),"",
+						"", resultSet.getString("dname"));
+				
+				//int vid,int pid,int did, LocalDate vdate,String fname,String lname,String description,String dname
+				visitList.add(visit);
+			}
+		} catch(SQLException ex) {
+			ex.printStackTrace();
+		}
+		
+		
+		return visitList;
+		
 	}	
 	
 
