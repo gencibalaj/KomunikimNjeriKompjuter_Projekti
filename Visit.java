@@ -119,4 +119,25 @@ public class Visit {
 			ex.printStackTrace();
 			return false;	
 		}
+	}
+	public static boolean updateInTable(int vid,String fname, String lname,LocalDate vdate,String description)
+	{
+		String query = "UPDATE visit SET fname=?, lname=?, vdate=? ,description=? WHERE vid=?";
+		try {
+			
+			PreparedStatement preparedStatement =(PreparedStatement) ConnectToDB.connection.prepareStatement(query);
+		
+
+		
+			preparedStatement.setString(1, fname);
+			preparedStatement.setString(2, lname);
+			preparedStatement.setDate(3,Date.valueOf(vdate));
+			preparedStatement.setString (4, description);
+			preparedStatement.setInt(5, vid);
+			
+			System.out.println(preparedStatement.toString());
+		
+			
 	
+
+
