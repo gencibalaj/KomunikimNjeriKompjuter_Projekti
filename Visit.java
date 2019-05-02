@@ -64,3 +64,40 @@ public class Visit {
 	
 	//getters
 	
+	public int getPid()
+	{
+		return pid;
+	}
+	public int getVid()
+	{
+		return vid;
+	}
+	public int getDid()
+	{
+		return did;
+	}
+	
+	public String getDname()
+	{
+		return dname;
+	}
+	
+	
+	public LocalDate getVdate()
+	{
+		return vdate;
+	}
+	
+	public String getFname()
+	{
+		return fname;
+	}
+	
+	public String getLname()
+	{
+		return lname;
+	}
+	public String  getDescription()
+	{
+		return description;
+	}
