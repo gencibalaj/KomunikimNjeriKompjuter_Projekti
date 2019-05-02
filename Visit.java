@@ -138,6 +138,26 @@ public class Visit {
 			System.out.println(preparedStatement.toString());
 		
 			
+			
+			return (preparedStatement.executeUpdate() > 0);
+		} catch(SQLException ex) {
+			ex.printStackTrace();
+			return false;	
+		}
+	}
+	public static boolean deleteVisit(int vid) {
+		String query = "Delete from visit where vid=?";
+		
+		try {
+			PreparedStatement preparedStatement = (PreparedStatement) ConnectToDB.connection.prepareStatement(query);
+			preparedStatement.setInt(1, vid);
+			return (preparedStatement.executeUpdate() > 0);
+		} catch(SQLException ex) {
+			ex.printStackTrace();
+			return false;
+		}
+	}
+	}	
 	
 
 
