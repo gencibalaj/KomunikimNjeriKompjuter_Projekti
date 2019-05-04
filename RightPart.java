@@ -30,3 +30,19 @@ public class RightPart extends VBox{
 		 * 
 		 * img.setFitWidth(300); setAlignment(Pos.CENTER); setSpacing(150);
 		 * setPadding(new Insets(10,10,10,10)); getChildren().addAll(img,new
+		 * UserInfo(Name, Lname));
+		 */
+			
+			setOnDragOver(new EventHandler<DragEvent>() {
+			    public void handle(DragEvent event) {
+			        if (event.getGestureSource() != this &&
+			                event.getDragboard().hasString()) {
+			        		
+				  
+			        }
+			        
+			        event.consume();
+			    }
+			});
+		}	
+}
