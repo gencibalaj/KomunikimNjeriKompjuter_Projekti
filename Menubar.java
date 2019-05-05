@@ -26,3 +26,36 @@ public class Menubar extends VBox {
 	 
 	 MenuItem nightMode=new MenuItem("Night Mode");
 	
+	public Menubar()
+	{
+		
+		File.getItems().addAll(exit, restart);
+		Edit.getItems().addAll(nightMode);
+		allopsions.getMenus().addAll(File,Edit,Help,Account);
+		getChildren().add(allopsions);
+		
+		
+		
+		
+		exit.setOnAction(e->{
+			exit((Stage)(this.getScene().getWindow()));
+		});
+		restart.setOnAction(e->{
+			exit((Stage)(this.getScene().getWindow()));
+		
+			 Platform.runLater( () -> new Login().start( new Stage() ) );
+			
+			
+			
+		});
+		
+	}
+	
+	public void exit(Stage s)
+	{	
+		s.close();
+		
+	}
+	
+	
+}
