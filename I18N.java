@@ -26,3 +26,20 @@ public static ObjectProperty<Locale> locale;
 	
 	
 	public static ArrayList<Locale> getLanguages() {
+		return new ArrayList<Locale>(Arrays.asList(Locale.ENGLISH, new Locale("al", "AL")));
+	}
+	
+	public static Locale getDefaultLocale() {
+		return Locale.ENGLISH;
+	}
+
+	public static Locale getLocale() {
+		return locale.get();
+	}
+	
+	public static void setLocale(Locale locale) {
+		localProperty().set(locale);
+	}
+	
+	public static ObjectProperty<Locale> localProperty() {
+
