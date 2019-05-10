@@ -42,4 +42,18 @@ public static ObjectProperty<Locale> locale;
 	}
 	
 	public static ObjectProperty<Locale> localProperty() {
-
+		return locale;
+	}
+	
+	public static String get(String key, Object... args) {
+		ResourceBundle bundle = ResourceBundle.getBundle("translates.translate", getLocale());
+	
+		return MessageFormat.format(bundle.getString(key), args);	
+	}
+	
+	public static StringBinding createStringBinding(String key, Object... args) {
+		return Bindings.createStringBinding(() -> get(key, args), locale);
+	}
+	
+	public static void setText (Node[] node,String[] key, Object... args) {
+	
