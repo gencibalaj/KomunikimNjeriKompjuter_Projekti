@@ -11,3 +11,14 @@ public class MenuBar extends HBox {
 	private Text Account=new Text("Account");
 	
 	
+	
+	
+	public MenuBar()
+	{
+		setSpacing(25);
+	
+		getChildren().addAll(File,Edit,Help,Account);
+	}
+	
+	
+}
