@@ -16,3 +16,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Labeled;
 import javafx.scene.control.TextField;
+
+public class I18N {
+public static ObjectProperty<Locale> locale;
+	
+	static {
+		locale = new SimpleObjectProperty<>(getDefaultLocale());
+	}
+	
+	
+	public static ArrayList<Locale> getLanguages() {
