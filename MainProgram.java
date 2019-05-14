@@ -91,4 +91,23 @@ public class MainProgram {
 		
 		/*Stage print =new Stage();
 		print.setMinHeight(842);
-	
+		print.setMinWidth(595);
+		print.setResizable(false);
+		print.setScene(s);*/
+		
+		
+		
+		//stage.setScene(diti);
+		
+		s=new Scene(primaryPane);
+
+		//stage.setMinWidth(1000);
+		//stage.setMinHeight(1000);
+		stage.getIcons().add(new Image("projektiKNK/ordi2.png"));
+		stage.setTitle("Ordinaca Mjeksore");
+		stage.setScene(s);
+		stage.show();
+		primaryPane.requestFocus();
+		//print.show();
+	}
+}
