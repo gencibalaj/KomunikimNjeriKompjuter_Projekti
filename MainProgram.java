@@ -32,3 +32,28 @@ import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 
+public class MainProgram {
+
+	
+	
+	public static BorderPane primaryPane;
+	public static Stage PrintGuidance=new Stage();
+	public static Scene s;
+	public static Doctor doctor;
+	private static Pacient pacient;
+	
+	
+	ComboBox<String> languagesCbo = new ComboBox<>();
+	
+	public static Pacient getPacient() {
+		return pacient;
+	}
+	
+	public static void setPacient(Pacient p) {
+		pacient = p;
+		LeftSideButtons.ToggleButtons(false);
+	}
+	
+	public MainProgram(Stage stage, Doctor doctor)  
+	{
+		new ConnectToDB();
