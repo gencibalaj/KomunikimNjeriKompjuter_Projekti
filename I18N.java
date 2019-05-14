@@ -56,4 +56,22 @@ public static ObjectProperty<Locale> locale;
 	}
 	
 	public static void setText (Node[] node,String[] key, Object... args) {
-	
+		for(int i = 0; i < node.length; i++) {
+			try {
+				if(node[i] instanceof TextField) {
+					((TextField)node[i]).promptTextProperty().bind(createStringBinding(key[i], args));
+				}else {
+					((Labeled)node[i]).textProperty().bind(createStringBinding(key[i], args));	
+				}
+			}catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+			
+	}
+	public static Label getLabel(String key, Object... args) {
+		Label label = new Label();
+		label.textProperty().bind(createStringBinding(key, args));
+		return label;		
+	}
+}
