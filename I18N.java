@@ -75,3 +75,6 @@ public static ObjectProperty<Locale> locale;
 		return label;		
 	}
 }
+
+
+
