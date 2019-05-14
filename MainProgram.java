@@ -57,3 +57,18 @@ public class MainProgram {
 	public MainProgram(Stage stage, Doctor doctor)  
 	{
 		new ConnectToDB();
+		this.doctor = doctor;
+		ScrollPane slide=new ScrollPane();	
+		Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
+		stage.setX(primaryScreenBounds.getMinX());
+		stage.setY(primaryScreenBounds.getMinY());
+		stage.setWidth(primaryScreenBounds.getWidth());
+		stage.setHeight(primaryScreenBounds.getHeight());
+		stage.setResizable(false);
+		
+		//TableView t=new TableView();
+		primaryPane=new BorderPane();
+		
+			ObservableList<String> allowedLanguages = FXCollections.observableArrayList();
+			
+			for(int i = 0;i < I18N.getLanguages().size();i++) {
