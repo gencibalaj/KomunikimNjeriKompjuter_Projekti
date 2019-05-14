@@ -72,3 +72,23 @@ public class MainProgram {
 			ObservableList<String> allowedLanguages = FXCollections.observableArrayList();
 			
 			for(int i = 0;i < I18N.getLanguages().size();i++) {
+				allowedLanguages.add(I18N.getLanguages().get(i).getLanguage());		
+			}
+			
+			languagesCbo.getItems().addAll(allowedLanguages);
+			languagesCbo.setValue(I18N.getDefaultLocale().getLanguage());
+			//languagesCbo.setOnAction(e -> switchLanguage());
+		
+		
+		//t.setText(ConnectToDB.result.toString());
+		primaryPane.setTop(new topPart());
+		primaryPane.setLeft(new LeftSideButtons());
+		primaryPane.setCenter(new AddPacient());
+		//primaryPane.setCenter(new ShowVisits());
+		primaryPane.setRight(new RightPart());
+		primaryPane.setBottom(new BottomPart());
+		
+		
+		/*Stage print =new Stage();
+		print.setMinHeight(842);
+	
