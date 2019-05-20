@@ -79,3 +79,22 @@ public class PrintGuideline extends VBox {
 		
 		
 	}
+	
+	public static void Print(Pane root) {
+		PrinterJob job = PrinterJob.createPrinterJob();
+		if(job != null){
+			job.showPrintDialog(root.getScene().getWindow());
+			Printer printer = job.getPrinter();
+			PageLayout pageLayout = printer.createPageLayout(Paper.A4,
+				PageOrientation.PORTRAIT, Printer.MarginType.HARDWARE_MINIMUM);
+			//PrintResolution resolution = job.getJobSettings().getPrintResolution();
+			boolean success = job.printPage(pageLayout, root);
+			if(success) {
+				job.endJob();
+			}
+		}	 
+	}
+
+
+
+}
