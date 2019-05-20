@@ -48,3 +48,14 @@ public class PrintGuideline extends VBox {
 		printPane.setMinHeight(842);
 		printPane.setMinWidth(595);
 		h1.setAlignment(Pos.CENTER);
+		h2.setAlignment(Pos.TOP_LEFT);
+		h3.setAlignment(Pos.TOP_LEFT);
+		h4.setAlignment(Pos.TOP_LEFT);
+		h5.setAlignment(Pos.TOP_LEFT);
+		h6.setAlignment(Pos.CENTER);
+		h7.setAlignment(Pos.BOTTOM_CENTER);
+
+		img.setImage(image);
+
+		img.setFitHeight(200);
+		img.setFitWidth(200);
