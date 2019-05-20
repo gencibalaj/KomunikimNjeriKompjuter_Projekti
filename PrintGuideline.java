@@ -32,3 +32,19 @@ public class PrintGuideline extends VBox {
 	public static StackPane spane;
 	VBox printPane = new VBox();
 	
+	HBox h1 = new HBox(50);
+	HBox h2 = new HBox(20);
+	HBox h3 = new HBox(20);
+	HBox h4 = new HBox(20);
+	HBox h5 = new HBox(20);
+	HBox h6 = new HBox(20);
+	HBox h7 = new HBox(20);
+	HBox h8 = new HBox(20);
+	Image image = new Image("file:///C:/Users/ditjo/eclipse-workspace/OrdinancaMjeksore/src/projektiKNK/ordi2.png");
+	ImageView img = new ImageView();
+	public PrintGuideline() {
+		setPadding(new Insets(10, 10, 10, 10));
+		printPane.setSpacing(20);
+		printPane.setMinHeight(842);
+		printPane.setMinWidth(595);
+		h1.setAlignment(Pos.CENTER);
