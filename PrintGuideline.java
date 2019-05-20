@@ -59,3 +59,12 @@ public class PrintGuideline extends VBox {
 
 		img.setFitHeight(200);
 		img.setFitWidth(200);
+
+		h1.getChildren().addAll(img, new Text("ORDINANCA MJEKSORE"));
+		h2.getChildren().addAll(new Label("First Name"), namefromdb);
+		h3.getChildren().addAll(new Label("Last Name"), lnamefromdb);
+		h4.getChildren().addAll(new Label("Personal Number"), nrpersonalfromdb);
+		h5.getChildren().addAll(new Label("Medical Guideliness:"));
+		h6.getChildren().addAll(descripion);
+		h7.getChildren().addAll(new Label("Releast by:"), docnamefromdb);
+		descripion.setPrefHeight(300);
