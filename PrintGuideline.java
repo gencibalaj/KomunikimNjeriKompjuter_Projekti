@@ -68,3 +68,14 @@ public class PrintGuideline extends VBox {
 		h6.getChildren().addAll(descripion);
 		h7.getChildren().addAll(new Label("Releast by:"), docnamefromdb);
 		descripion.setPrefHeight(300);
+		descripion.setPrefWidth(600);
+		Button b = new Button("EEEe");
+		
+		printPane.getChildren().addAll(h1, h2, h3, h4, h5, h6, h7);
+		getChildren().addAll(printPane,b);
+		b.setOnAction(e->{
+			Print(printPane);
+		});
+		
+		
+	}
