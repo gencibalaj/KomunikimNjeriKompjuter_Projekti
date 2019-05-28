@@ -23,3 +23,30 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
  import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+public class Login extends Application
+{
+	public void start(Stage primaryStage)
+	{
+		VBox vb=new VBox(10);
+		vb.setPadding(new Insets(15, 5, 5, 5));
+		vb.setAlignment(Pos.CENTER);
+		
+		GridPane pane =new GridPane();
+		//pane.setGridLinesVisible(true);
+		String CssTextField=("-fx-effect: dropshadow(gaussian,lightgrey,2,2,1,1);");
+		String CssTextField1=("-fx-opacity:0.9;"
+				+ "");
+		//fotot
+		Image image = new Image("images/ordi2.png");
+		ImageView img=new ImageView();
+		img.setImage(image);
+		img.setFitHeight(250);	
+		img.setFitWidth(250);
+		img.setStyle(CssTextField);
+		
+		
+		//labels
+		Label EmriPerdorues =new Label("Emriperdorues");
+		Label Fjalekalmi = new Label("Fjalekalimi");
+		
+		//textfields
