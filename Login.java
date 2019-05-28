@@ -50,3 +50,17 @@ public class Login extends Application
 		Label Fjalekalmi = new Label("Fjalekalimi");
 		
 		//textfields
+		
+		TextField PerEmerPerdorues=new TextField();
+		TextField PerFjalkalimi=new TextField();
+		PerEmerPerdorues.setStyle(CssTextField);
+		PerFjalkalimi.setStyle(CssTextField);
+		EmriPerdorues.setStyle(CssTextField1+CssTextField);
+		Fjalekalmi.setStyle(CssTextField1+CssTextField);
+		Text text = new Text("Gbim");
+		text.setVisible(false);
+		EmriPerdorues.setFont(Font.font ("Arial ", 15));
+		Fjalekalmi.setFont(Font.font ("Arial ", 15));
+		
+		
+		//butonat
