@@ -77,3 +77,20 @@ public class Login extends Application
 					primaryStage.close();
 				}else {
 					text.setVisible(true);
+				}
+		});
+		
+			
+		pane.setAlignment(Pos.CENTER);
+		pane.setHgap(10);
+		pane.setVgap(10);
+		pane.setPadding(new Insets(10, 10, 10, 10));
+		
+	
+		pane.add(EmriPerdorues, 0, 0);
+		pane.add(PerEmerPerdorues, 1, 0);
+		pane.add(Fjalekalmi, 0, 2);
+		pane.add(PerFjalkalimi,1,2 );
+		pane.add(text, 2, 3);
+		
+		pane.setHalignment(login, HPos.RIGHT);
