@@ -64,3 +64,16 @@ public class Login extends Application
 		
 		
 		//butonat
+		Button login=new Button("Kyçu");
+		login.setStyle("-fx-background-color:lightblue;"+"-fx-effect: dropshadow(gaussian,grey,1,1,1,1);"+"-fx-opacity:0.9");
+		login.setFont(Font.font ("Arial Black", 13));
+		
+		login.setOnAction(e -> {
+				new ConnectToDB();
+				Doctor doctor = Doctor.login(PerEmerPerdorues.getText() , PerFjalkalimi.getText());
+				if(doctor != null) {
+					Stage stage = new Stage();
+					new MainProgram(stage,doctor);
+					primaryStage.close();
+				}else {
+					text.setVisible(true);
