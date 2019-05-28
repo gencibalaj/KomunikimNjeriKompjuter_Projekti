@@ -114,4 +114,22 @@ public class Login extends Application
 				primaryStage.close();
 			}else {
 				text.setVisible(true);
+			}
+		});
+		primaryStage.setScene(skena);
+		primaryStage.setResizable(false);
+		primaryStage.setTitle("Hyrja");
+		primaryStage.show();
+		
+			
+	}
 	
+
+		
+
+	public static void main(String[] args)
+	{
+		
+		Login.launch(args);
+	}
+}
