@@ -94,3 +94,24 @@ public class Login extends Application
 		pane.add(text, 2, 3);
 		
 		pane.setHalignment(login, HPos.RIGHT);
+		
+		pane.add(login, 1,3);
+		
+		vb.getChildren().addAll(img,pane);
+		vb.setPrefSize(200,200);
+		
+		
+		
+		
+		
+		Scene skena =new Scene(vb,500,500);
+		skena.setOnKeyPressed(e->{
+			new ConnectToDB();
+			Doctor doctor = Doctor.login(PerEmerPerdorues.getText() , PerFjalkalimi.getText());
+			if(doctor != null) {
+				Stage stage = new Stage();
+				new MainProgram(stage,doctor);
+				primaryStage.close();
+			}else {
+				text.setVisible(true);
+	
