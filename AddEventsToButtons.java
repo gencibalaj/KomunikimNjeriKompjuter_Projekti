@@ -49,4 +49,20 @@ public class AddEventsToButtons implements  EventHandler<ActionEvent>  {
 			case "update":
 				MainProgram.primaryPane.setCenter(new AddPacient(MainProgram.getPacient()));
 				break;
-		
+			case "showPatient":
+				MainProgram.primaryPane.setCenter(new ShowPacients());
+				break;
+			case "al":
+				((Button)topPart.getToolbar().lookup("#al")).setDisable(true);
+				((Button)topPart.getToolbar().lookup("#en")).setDisable(false);
+				Toolbar.switchLanguage("al");
+				break;
+			case "en":
+				((Button)topPart.getToolbar().lookup("#al")).setDisable(false);
+				((Button)topPart.getToolbar().lookup("#en")).setDisable(true);
+				Toolbar.switchLanguage("en");
+				break;
+		}
+	}
+	
+}
