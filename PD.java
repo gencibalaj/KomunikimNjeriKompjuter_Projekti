@@ -18,4 +18,21 @@ public class PD {
 		}
 	}
 	
+	public int PDgeter(String s)
+	{
+		int v =0;
+		switch (s)
+		{
+		case "pid":
+			v=this.pid;
+			break;
+		case "did":
+			v=this.did;
+			break;
+			
+		}
+		return v;
+		
+	}
 	
+}
