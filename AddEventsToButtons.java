@@ -31,4 +31,22 @@ public class AddEventsToButtons implements  EventHandler<ActionEvent>  {
 	public AddEventsToButtons(String id) {
 		this.id = id;
 	}
+	
+
+	@Override
+	public void handle(ActionEvent event) {
+		switch(id) {
+			case "add":
+				MainProgram.primaryPane.setCenter(new AddPacient());
+				break;
+			case "remove":
+				//TODO
+				Pacient.deletePacient(MainProgram.getPacient().getPid());
+				break;
+			case "addVisits":
+				MainProgram.primaryPane.setCenter(new AddVisit());
+				break;
+			case "update":
+				MainProgram.primaryPane.setCenter(new AddPacient(MainProgram.getPacient()));
+				break;
 		
