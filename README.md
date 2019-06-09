@@ -1,1 +1,0 @@
-# KomunikimNjeriKompjuter_Projekti
